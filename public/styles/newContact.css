@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+.new-contact{
+   height: 100vh;
+   background-color: #e1e5e8;
+   display: flex;
+   flex-direction: column;
+}
+
+header  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7px;
+    background: #70a4c6;  
+    background: -webkit-linear-gradient(to right, #2c3e50, #89acc3); 
+    background: linear-gradient(to right, #4a6e93, #9ec0d6); 
+}
+
+h1 {
+    font-size: 25px;
+    font-weight: 600;
+    color: whitesmoke;
+    padding: 15px 0px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7rem;
+    gap: 1px;
+}
+
+.input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+input {
+    width: 300px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    padding: 0px 10px;
+    font-size: 16px;
+    background: rgba(255,255,255);
+    font-size: 14px;
+    color: #4a6e93;
+}
+
+button {
+    width: 200px;
+    margin-top: 10px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    color: whitesmoke;
+    background: #70a4c6;
+   cursor: pointer;
+   transition: 0.1s;
+   font-size: 16px;
+   font-weight: 550;
+
+}
+
+button:hover {
+    background: #4a6e93;
+}
+
+button:active {
+    background: #2c3e50;
+}
+
+input::placeholder {
+font-size: 14px;
+font-weight: 500;
+color: #4a6e93;
+}
+
+ input:focus {
+      border: 2px solid #4a6e93;
+ }
+

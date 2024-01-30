@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/image/icons8-new-contact-96.png" type="image/png"  sizes="256x256">
+    <title>My-contacts</title>
+    <link rel="stylesheet" href="/styles/newContact.css">
+</head>
+
+<body>
+    <form action= "<%= locals.contact ? '/contacts/editContact/' + contact._id : '/contacts/addContact' %>" method= "post">
+    <div class="new-contact">
+        <header>
+            <h1><%= locals.contact ? "editContact" : "new-contact" %></h1>
+        </header>
+
+         <div class="form">
+
+            <div class="input">
+             <input type="text" name="name" placeholder="Name" required value= "<%= locals.contact ? contact.name : '' %>" >
+            </div>
+           <div class="input">
+            <input type="email" name="email" placeholder="Email" required value= "<%= locals.contact ? contact.email : '' %>" >
+           </div>
+           <div class="input">
+             <input type="text" name="phone" placeholder="Phone" required value= "<%= locals.contact ? contact.phone : '' %>" > 
+           </div>
+
+            <button type="submit"><%= locals.contact ? "Save" : "Add Contact" %></button>
+         </div>
+            
+    </div>
+</form>
+</body>
+</html>

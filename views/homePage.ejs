@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/homePage.css">
+    <link rel="stylesheet" href="/styles/navbar.css">
+    <link rel="icon" href="image/icons8-new-contact-96.png" type="image/png"  sizes="256x256">
+    <title>My-contacts</title>
+</head>
+
+<body>
+    <%- include("navbar.ejs") %>
+    <div class="container">
+    <header>
+       <h1><%= userName.username %></h1>
+    </header>
+    <header>
+<a href="/contacts/addContact"><button type="button" class="button">
+    <span class="button__text">New Contact</span>
+    <span class="button__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24" fill="none" class="svg"><line y2="19" y1="5" x2="12" x1="12"></line><line y2="12" y1="12" x2="19" x1="5"></line></svg></span>
+  </button></a>
+    </header>
+    <% contacts.forEach(function(contacts) { %>
+        <a href="/contacts/<%= contacts._id %>">
+        <section class="contacts-container">
+           
+            <ul>
+                 <div class="contact-card">
+                     <li><p><%= contacts.name %></p></li>
+                    <!-- <li><p><%= contacts.email %></p></li> -->
+                    <li><p><%= contacts.phone %></p></li>   
+                  </div>
+             </ul>
+             <div class="contact-circle"><%= contacts.name.charAt(0) %></div>
+         </section>
+        </a>
+         <hr>
+          <% }); %>
+     </div>
+     
+    <script>
+
+document.querySelectorAll('.contact-circle').forEach(circle => {
+    const name = circle.textContent;
+    const color = stringToColor(name);
+    circle.style.backgroundColor = color;
+});
+
+
+function stringToColor(str) {
+    let hash = 0;
+    for (let i = 0; i < str.length; i++) {
+        hash = str.charCodeAt(i) + ((hash << 5) - hash);
+    }
+    const hue = hash % 360; // Hue (note: 360 = red, just as 0 does)
+    return 'hsl(' + hue + ', 50%, 75%)'; // Output as HSL (note: 50% Saturation, 75% Lightness)
+}
+    </script>
+    
+</body>
+</html>
+

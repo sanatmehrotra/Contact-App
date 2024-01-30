@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>My-contacts</title>
+    <link rel="stylesheet" href="/styles/contactDetail.css">
+    <link rel="icon" href="image/icons8-new-contact-96.png" type="image/png"  sizes="256x256">
+</head>
+<body>
+    <div class="contact-detail"> 
+        <h1>
+         Contact Detail
+        </h1>
+        <div class="btn">
+            <a href="/contacts/editContact/<%= contact._id %>">
+             <button type="button"><i class="fa-regular fa-pen-to-square"></i>edit</button>
+            </a>
+
+            <a href="/contacts/deleteContact/<%= contact._id %>">
+            <button type="button"><i class="fa-solid fa-trash-can"></i>delete</button>
+            </a>
+        </div>
+        <div class="detail">
+            <p>Name: <span> <%= contact.name %></span></p>
+            <p>Phone: <span><%= contact.phone %></span></p>
+            <p>Email: <span><%= contact.email %></span></p>
+        </div>
+    </div>
+    
+</body>
+</html>

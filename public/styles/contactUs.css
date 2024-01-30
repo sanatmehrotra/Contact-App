@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body {
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.6), #3551b5 ),  url(../image/pexels-monstera-production-7794422.jpg); */
+background-image:  url(../image/pexels-monstera-production-7794422.jpg);
+ background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+background-attachment: fixed; 
+}
+
+
+.title{
+   margin-bottom: 35px;
+   font-size: 25px;
+   font-weight: 600;
+   color: wheat;
+}
+
+form {
+      width: 100%;
+      height: 100vh;
+       display: flex;
+      justify-content: center;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.6);
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+}
+
+.input {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+input, textarea {
+  width: 100%;
+  outline: none;
+  border: 1px solid #fff;
+  padding: 10px; 
+  color: #fff;
+  background: transparent;
+  font-size: 15px;
+}
+
+label {
+    display: flex;
+    height: 100%;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    padding: 10px;
+    color: #fff;
+    cursor: text;
+    transition: 0.2s;
+}
+
+button {
+    padding: 10px 0px;
+    border: 1px solid #fff;
+    background: transparent;
+    color: #fff;
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+
+}
+
+input:focus~label,
+input:valid~label,
+textarea:focus~label,
+textarea:valid~label{
+   top: -35px;
+   font-size: 14px;
+}
+
+i { 
+    position: relative;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    cursor: pointer;
+    padding-left: 5px;
+    
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
