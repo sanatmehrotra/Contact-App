@@ -28,19 +28,18 @@ const Data = asyncHandler(async (req, res) => {
         let message_2= {
             from: "mehrotrasanat2006@gmail.com",
             to: req.body.email,
-            subject: 'Thank You for Contacting SeaBirds!',
+            subject: 'Thank You for Your Feedback',
             text: 
            `Dear ${req.body.name},
-            Thank you for reaching out to SeaBirds! Your message has been received loud and clear, and we're excited to assist you with any questions or concerns you may have.
             
-            Our dedicated team is already hard at work addressing your inquiry. Rest assured, we'll provide you with the best possible assistance and guidance to ensure your experience with SeaBirds is nothing short of exceptional.
-            
-            While we work on resolving your query, feel free to explore more about SeaBirds on our website or through our social media channels.
-            
-            Thank you once again for choosing SeaBirds. We truly appreciate your trust and look forward to serving you.
-            
-            Warm regards,
-            SeaBirds Team`,
+           Thank you for taking the time to share your feedback with us! Your insights are valuable and contribute to our ongoing efforts to improve.
+           
+           We appreciate your input and want you to know that your feedback has been noted. If you have any further thoughts or suggestions, please feel free to reach out.
+           
+           Once again, thank you for your valuable feedback.
+           
+           Best regards,
+           Sanat Mehrotra`,
         };
     
         transporter.sendMail(message, (err, info) => {
