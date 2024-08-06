@@ -9,24 +9,30 @@
     <link rel="icon" href="image/icons8-new-contact-96.png" type="image/png"  sizes="256x256">
 </head>
 <body>
-
-    <form action="/contact-us" method="post">
-
+  <div class="video-background">
+    <video autoplay muted loop id="bg-video">
+        <source src="/ss.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+    <form action="/contact-us" method="post"> 
+   
 <div class="container">
+  
     <div class="title">Contact Us</div>
     
      <div class="input">
         <input type="text" name="name" id="name" required>
-        <label for="name"><i class="fa-solid fa-user" style="color: wheat;"></i>Your Name</label>
+        <label for="name"><i class="fa-solid fa-user" style="color: rgb(116, 171, 226);"></i>Your Name</label>
       </div>
       
       <div class="input">
         <input type="text" name="email" id="email" required>
-        <label for="email"> <i class="fa-solid fa-envelope" style="color: wheat;"></i>Email Id</label>
+        <label for="email"> <i class="fa-solid fa-envelope" style="color: rgb(116, 171, 226);"></i>Email Id</label>
       </div>
       <div class="input">
         <textarea name="message" id="message" rows="8" required></textarea>
-        <label for="message"><i class="fa-solid fa-message" style="color: wheat; "></i>Your message</label>
+        <label for="message"><i class="fa-solid fa-message" style="color: rgb(116, 171, 226); "></i>Your message</label>
       </div>
        <button type="submit"><a href="/contact-us">SUMBIT</a></button>
    

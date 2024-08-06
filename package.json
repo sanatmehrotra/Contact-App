@@ -21,6 +21,7 @@
     "express-async-handler": "^1.2.0",
     "js-cookie": "^3.0.5",
     "jsonwebtoken": "^9.0.2",
-    "nodemailer": "^6.9.8"
+    "nodemailer": "^6.9.8",
+    "nodemon": "^3.1.4"
   }
 }

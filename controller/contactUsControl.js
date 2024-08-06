@@ -39,7 +39,7 @@ const Data = asyncHandler(async (req, res) => {
            Once again, thank you for your valuable feedback.
            
            Best regards,
-           Sanat Mehrotra`,
+           Team Cubix`,
         };
     
         transporter.sendMail(message, (err, info) => {
